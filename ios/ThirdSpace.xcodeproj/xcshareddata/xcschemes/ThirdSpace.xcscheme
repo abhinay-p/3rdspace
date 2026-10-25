@@ -50,6 +50,17 @@
                ReferencedContainer = "container:ThirdSpace.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DA4DCC8D789D9CF722F004CB"
+               BuildableName = "ThirdSpaceUITests.xctest"
+               BlueprintName = "ThirdSpaceUITests"
+               ReferencedContainer = "container:ThirdSpace.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <CommandLineArguments>
       </CommandLineArguments>

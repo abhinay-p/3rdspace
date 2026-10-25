@@ -35,6 +35,26 @@ struct SampleRepositoryTests {
         #expect(try await repository.businesses(in: bounds, category: .cafe) == [cafe])
     }
 
+    @Test func findsBusinessByID() async throws {
+        let cafe = makeBusiness("Cafe", .cafe, 10, 10)
+        let repository = makeRepository(businesses: [cafe])
+
+        #expect(try await repository.business(id: cafe.id) == cafe)
+        #expect(try await repository.business(id: UUID()) == nil)
+    }
+
+    @Test func upcomingEventsInBoundsOnlyIncludeVisibleBusinesses() async throws {
+        let nearby = makeBusiness("Nearby", .cafe, 10, 10)
+        let farAway = makeBusiness("Far Away", .bar, 50, 50)
+        let nearbyEvent = makeEvent(for: nearby, startingIn: 2)
+        let farAwayEvent = makeEvent(for: farAway, startingIn: 1)
+        let endedEvent = makeEvent(for: nearby, startingIn: -3)
+        let repository = makeRepository(
+            businesses: [nearby, farAway], events: [nearbyEvent, farAwayEvent, endedEvent])
+
+        #expect(try await repository.upcomingEvents(in: bounds) == [nearbyEvent])
+    }
+
     @Test func upcomingEventsSkipEndedEventsAndSortByStart() async throws {
         let cafe = makeBusiness("Cafe", .cafe, 10, 10)
         let ended = makeEvent(for: cafe, startingIn: -3)

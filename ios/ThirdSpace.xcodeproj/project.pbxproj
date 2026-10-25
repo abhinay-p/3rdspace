@@ -14,29 +14,34 @@
 			remoteGlobalIDString = A6415D63E19C23D81E310B5C;
 			remoteInfo = ThirdSpace;
 		};
+		764A3F04780DFF0FFCDE6A38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 44987B5E2700153A545A60C5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A6415D63E19C23D81E310B5C;
+			remoteInfo = ThirdSpace;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		19CDD155E6B1BFA7200E16E4 /* ThirdSpaceTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = ThirdSpaceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		56A6C98AD2B15DD3310C9672 /* ThirdSpaceUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = ThirdSpaceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		599C3DCB2988B9F01112358B /* ThirdSpace.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = ThirdSpace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		54EBA5AFE39AEC1022A39CF7 /* ThirdSpaceTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			explicitFileTypes = {
-			};
-			explicitFolders = (
-			);
 			path = ThirdSpaceTests;
+			sourceTree = "<group>";
+		};
+		C525790B54BCAFCD77B3145E /* ThirdSpaceUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ThirdSpaceUITests;
 			sourceTree = "<group>";
 		};
 		EBA1C3840BE041CFEE7F9E57 /* ThirdSpace */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			explicitFileTypes = {
-			};
-			explicitFolders = (
-			);
 			path = ThirdSpace;
 			sourceTree = "<group>";
 		};
@@ -48,6 +53,7 @@
 			children = (
 				599C3DCB2988B9F01112358B /* ThirdSpace.app */,
 				19CDD155E6B1BFA7200E16E4 /* ThirdSpaceTests.xctest */,
+				56A6C98AD2B15DD3310C9672 /* ThirdSpaceUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -57,6 +63,7 @@
 			children = (
 				EBA1C3840BE041CFEE7F9E57 /* ThirdSpace */,
 				54EBA5AFE39AEC1022A39CF7 /* ThirdSpaceTests */,
+				C525790B54BCAFCD77B3145E /* ThirdSpaceUITests */,
 				949EB68C39668F3ECC09C704 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -84,6 +91,28 @@
 			productName = ThirdSpace;
 			productReference = 599C3DCB2988B9F01112358B /* ThirdSpace.app */;
 			productType = "com.apple.product-type.application";
+		};
+		DA4DCC8D789D9CF722F004CB /* ThirdSpaceUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B185AD746AB5FB4BEC0A65F /* Build configuration list for PBXNativeTarget "ThirdSpaceUITests" */;
+			buildPhases = (
+				BFC5FADCAD44CEF389C8FD2F /* Sources */,
+				AA89AED8E6383DA597F21CA6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5903D4F289E23B650D2ADBCC /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				C525790B54BCAFCD77B3145E /* ThirdSpaceUITests */,
+			);
+			name = ThirdSpaceUITests;
+			packageProductDependencies = (
+			);
+			productName = ThirdSpaceUITests;
+			productReference = 56A6C98AD2B15DD3310C9672 /* ThirdSpaceUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 		F4A3884B8FADC74A529E18C9 /* ThirdSpaceTests */ = {
 			isa = PBXNativeTarget;
@@ -120,6 +149,11 @@
 						DevelopmentTeam = "";
 						ProvisioningStyle = Automatic;
 					};
+					DA4DCC8D789D9CF722F004CB = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+						TestTargetID = A6415D63E19C23D81E310B5C;
+					};
 					F4A3884B8FADC74A529E18C9 = {
 						DevelopmentTeam = "";
 						ProvisioningStyle = Automatic;
@@ -142,12 +176,20 @@
 			targets = (
 				A6415D63E19C23D81E310B5C /* ThirdSpace */,
 				F4A3884B8FADC74A529E18C9 /* ThirdSpaceTests */,
+				DA4DCC8D789D9CF722F004CB /* ThirdSpaceUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		3F150D698CB7D621693F15AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA89AED8E6383DA597F21CA6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -171,6 +213,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BFC5FADCAD44CEF389C8FD2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D3C054FFC75B5CC80AC8D9AF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -186,6 +235,11 @@
 			target = A6415D63E19C23D81E310B5C /* ThirdSpace */;
 			targetProxy = 51B758518AE5E78E2FB050BE /* PBXContainerItemProxy */;
 		};
+		5903D4F289E23B650D2ADBCC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A6415D63E19C23D81E310B5C /* ThirdSpace */;
+			targetProxy = 764A3F04780DFF0FFCDE6A38 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
@@ -196,6 +250,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = 3rdSpace;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "3rdSpace uses your location to center the map on your neighborhood. Your location stays on your phone.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -285,6 +340,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = 3rdSpace;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "3rdSpace uses your location to center the map on your neighborhood. Your location stays on your phone.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -377,6 +433,40 @@
 			};
 			name = Release;
 		};
+		9EBB02DB135627A11CBE046B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.abhinay.thirdspace.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ThirdSpace;
+			};
+			name = Debug;
+		};
+		A052D7B26D983F928081C338 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.abhinay.thirdspace.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ThirdSpace;
+			};
+			name = Release;
+		};
 		DDD7979AFA1BB6CAB3A7CD76 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -411,6 +501,15 @@
 			buildConfigurations = (
 				26DFC5289E05246C6C5CF082 /* Debug */,
 				63C2A59C365E86C5EF9615FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		1B185AD746AB5FB4BEC0A65F /* Build configuration list for PBXNativeTarget "ThirdSpaceUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9EBB02DB135627A11CBE046B /* Debug */,
+				A052D7B26D983F928081C338 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

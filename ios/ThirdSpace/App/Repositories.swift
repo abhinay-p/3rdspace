@@ -6,12 +6,15 @@ struct Repositories {
 }
 
 extension Repositories {
-    static func sample(relativeTo now: Date = .now) -> Repositories {
-        let store = SampleRepository(data: .make(relativeTo: now))
-        return Repositories(businesses: store, events: store)
+    init(sampleData: SampleData, storageURL: URL? = nil) {
+        let store = SampleRepository(data: sampleData, storageURL: storageURL)
+        self.init(businesses: store, events: store)
     }
 }
 
 extension EnvironmentValues {
-    @Entry var repositories: Repositories = .sample()
+    @Entry var previewRepositories: Repositories = Repositories(sampleData: .make())
+    @Entry var publicEvents: PublicEventsRepository? = nil
+    @Entry var repositories: Repositories = Repositories(sampleData: .make())
+    @Entry var ownedBusinessID: Business.ID? = nil
 }

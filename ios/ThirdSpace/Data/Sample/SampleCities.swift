@@ -1,5 +1,5 @@
 extension SampleCity {
-    static let all = [losAngeles, sanFrancisco, newYork, chicago, boston, seattle, austin]
+    static let all = [losAngeles, sanFrancisco, newYork, chicago, boston, seattle, austin] + nationwideAdditions
 
     private static let losAngeles = SampleCity(
         name: "Los Angeles", state: "CA", timeZoneID: "America/Los_Angeles",
@@ -72,6 +72,7 @@ extension SampleCity {
             SamplePlace(
                 "Valencia Morning Bread", .cafe, street: "Valencia St", 37.7640, -122.4216,
                 about: "Sourdough, morning buns, and strong coffee from a tiny corner counter.",
+                isYours: true,
                 events: [
                     SampleEvent(
                         "Sourdough Starter Clinic", day: 3, at: 10, hours: 2, capacity: 12,

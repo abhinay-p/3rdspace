@@ -1,0 +1,31 @@
+{
+  "nps": {
+    "fetchedAt": "2026-10-25T22:15:00Z",
+    "isComplete": false,
+    "recordCount": 500,
+    "publisherTotal": 1425,
+    "sourceURL": "https://developer.nps.gov/api/v1/events",
+    "notes": "First 10 pages of official published events. Additional requests hit the public DEMO_KEY rate limit; no claim of comprehensive event coverage. Dates, coordinates and recurrence come from the publisher. Records without exact coordinates are not mapped."
+  },
+  "loc": {
+    "fetchedAt": "2026-10-25T22:15:00Z",
+    "isComplete": false,
+    "recordCount": 100,
+    "sourceURL": "https://www.loc.gov/events/?fo=json&c=100&at=results,pagination",
+    "notes": "First page of 100 publisher events; includes online-only events that the mapper omits. No inferred events, dates or venues."
+  },
+  "npsPlaces": {
+    "fetchedAt": "2026-10-25T22:15:00Z",
+    "isComplete": true,
+    "recordCount": 1066,
+    "sourceURL": "https://mapservices.nps.gov/arcgis/rest/services/NationalDatasets/NPS_Public_POIs/MapServer/0",
+    "query": "POITYPE IN ('Visitor Center','Museum','Amphitheater','Library','Cultural Center','Education Center','Public Building','Park','Recreation','Event Facility','Community Center','Garden','Cafe','Coffee Shop') AND (OPENTOPUBLIC <> 'No' OR OPENTOPUBLIC IS NULL) AND (POISTATUS <> 'Removed' OR POISTATUS IS NULL)",
+    "notes": "Complete response for this selected place-type query (not every US place). Original NPS point coordinates. UI excludes explicitly closed/no-access places and foreign/territory coordinates outside the 50-state geometry. Unknown hours/access are disclosed; no events are synthesized from place records."
+  },
+  "npsTimeZones": {
+    "fetchedAt": "2026-10-25T22:15:00Z",
+    "isComplete": false,
+    "sourceURL": "https://github.com/jannikmi/timezonefinder",
+    "notes": "Derived from official NPS public POI coordinates using timezonefinder 9.0.0 and its timezone-boundary-builder geographic timezone dataset. Only units whose returned points all resolve to one IANA zone are included. Units spanning multiple zones are omitted. Runtime has no timezonefinder dependency. Timezone boundary data is ODbL-licensed; see https://github.com/evansiroky/timezone-boundary-builder."
+  }
+}
